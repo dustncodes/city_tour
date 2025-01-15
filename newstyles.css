@@ -60,7 +60,7 @@ a {
 }
 
 .logo img {
-    width: 400px;
+    max-width: 80%;
 }
 
 .links {
@@ -91,18 +91,4 @@ footer div {
 .right {
     width: 80px;    
     float: right;
-}
-
-@media (max-width: 1200px) {
-    .logo {
-        margin-top: 20vh;
-    }
-
-    .logo img {
-        width: 300px;
-    }
-
-    .title {
-        font-size: x-large;
-    }
 }
