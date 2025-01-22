@@ -15,13 +15,37 @@
   </header>  
   <div class="center">
     <div class="content">
-      <div class="logo">
-        <img src="overview_de.jpeg" alt="Bamberg City Tour">          
-      </div>    
+      <div class="preview">
+        <img src="previews/en/0.png" alt="Image 1" class="active">
+        <img src="previews/en/1.png" alt="Image 2">
+        <img src="previews/en/2.png" alt="Image 3">
+        <img src="previews/en/3.png" alt="Image 4">
+        <img src="previews/en/4.png" alt="Image 5">
+
+        <div class="controls">
+          <button id="prev">&#9664;</button>
+          <button id="next">&#9654;</button>
+        </div>
+        <div class="app">
+          <div class="links">    
+            <a id="google-play-link" href="#"><img alt='Get it on Google Play' height=60px width=155px src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>                
+            <a id="app-store-link" href="#" style="display: inline-block; overflow: hidden; border-radius: 13px; height: 42px; margin-bottom: 4px"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1331251200?h=e787b40f0e3dbf9e419a649418a3e23a" alt="Download on the App Store" style="border-radius: 13px; height: 42px;"></a>                
+          </div>
+          <div class="flags">
+            <img src="https://flagcdn.com/w40/de.png" alt="German" data-locale="de">
+            <img src="https://flagcdn.com/w40/us.png" alt="English" data-locale="en">
+            <img src="https://flagcdn.com/w40/es.png" alt="Spanish" data-locale="es">
+            <img src="https://flagcdn.com/w40/pt.png" alt="Portuguese" data-locale="pt">
+            <img src="https://flagcdn.com/w40/fr.png" alt="French" data-locale="fr">
+            <img src="https://flagcdn.com/w40/it.png" alt="Italian" data-locale="it">
+            <img src="https://flagcdn.com/w40/nl.png" alt="Dutch" data-locale="nl">
+            <img src="https://flagcdn.com/w40/pl.png" alt="Polish" data-locale="pl">
+            <img src="https://flagcdn.com/w40/jp.png" alt="Japanese" data-locale="ja">
+          </div>
+        </div> 
+      </div>            
       <div class="title">        
-      </div>
-      <div class="links">        
-      </div>
+      </div>           
     </div>        
   </div>    
   <footer>  	
@@ -32,5 +56,79 @@
     <br>    
   </footer>
 </main>   
+
+<script>
+  const supportedLocales = ["en", "de"];
+  const urlParams = new URLSearchParams(window.location.search);
+    let locale = navigator.language.slice(0, 2);
+    let campaign = urlParams.get("campaign") || "default";
+
+    function updateLinks(campaign) {
+      document.getElementById("google-play-link").href = `https://play.google.com/store/apps/details?id=app.wuzzle&pcampaignid=${campaign}`;
+      document.getElementById("app-store-link").href = `https://apps.apple.com/de/app/wuzzle-word-lanes-word-jam/id1660307373?itsct=apps_box_badge&itscg=30200&campaign=${campaign}`;
+    }
+
+    if (!supportedLocales.includes(locale)) {
+      locale = "en"; // Default to 'en' if locale is not supported
+    }
+
+    const images = document.querySelectorAll(".preview img");
+
+    // Update image paths based on locale
+    function updateImages(newLocale) {
+      images.forEach((img, index) => {
+        img.src = `previews/${newLocale}/${index}.png`;
+      });
+    }
+
+    updateImages(locale);
+    updateLinks(campaign);
+
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    let currentIndex = 0;
+    const intervalTime = 3000; // Time in milliseconds to show each image
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    function showNextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function showPrevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    // Auto-rotate images
+    let interval = setInterval(showNextImage, intervalTime);
+
+    // Navigation button event listeners
+    nextButton.addEventListener("click", () => {
+      clearInterval(interval);
+      showNextImage();
+      interval = setInterval(showNextImage, intervalTime);
+    });
+
+    prevButton.addEventListener("click", () => {
+      clearInterval(interval);
+      showPrevImage();
+      interval = setInterval(showNextImage, intervalTime);
+    });
+
+    // Flag click event listeners
+    document.querySelectorAll(".flags img").forEach(flag => {
+      flag.addEventListener("click", () => {
+        const newLocale = flag.getAttribute("data-locale");
+        updateImages(newLocale);
+        locale = newLocale;
+      });
+    });  
+</script>
 </body>
 </html>
