@@ -8,46 +8,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
 
     <link rel="stylesheet" href="newstyles.css">        
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
   <header>  	
   </header>  
-  <div class="center">
-    <div class="content">
-      <div class="preview">
-        <img src="previews/en/0.png" alt="Image 1" class="active">
-        <img src="previews/en/1.png" alt="Image 2">
-        <img src="previews/en/2.png" alt="Image 3">
-        <img src="previews/en/3.png" alt="Image 4">
-        <img src="previews/en/4.png" alt="Image 5">
-
-        <div class="controls">
-          <button id="prev">&#9664;</button>
-          <button id="next">&#9654;</button>
-        </div>
-        <div class="app">
-          <div class="links">    
-            <a id="google-play-link" href="#"><img alt='Get it on Google Play' height=60px width=155px src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>                
-            <a id="app-store-link" href="#" style="display: inline-block; overflow: hidden; border-radius: 13px; height: 42px; margin-bottom: 4px"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1331251200?h=e787b40f0e3dbf9e419a649418a3e23a" alt="Download on the App Store" style="border-radius: 13px; height: 42px;"></a>                
+  <div class="main">
+    <div class="center">
+      <div class="content">
+        <div class="preview">        
+          <div class="images">
+            <img src="previews/en/0.png" alt="Image 1" class="active">
+            <img src="previews/en/1.png" alt="Image 2">
+            <img src="previews/en/2.png" alt="Image 3">
+            <img src="previews/en/3.png" alt="Image 4">
+            <img src="previews/en/4.png" alt="Image 5">
+            <div class="controls">
+              <button id="prev">&#9664;</button>
+              <button id="next">&#9654;</button>
+            </div>          
+          </div>          
+          <div class="app">
+            <div class="app-header">
+              <img class="logo" src="logo.png" alt="Logo">
+              <div class="title">   
+                Bamberg City Tour     
+              </div> 
+            </div>   
+            <!-- <div class="flags">
+              <img src="https://flagcdn.com/w40/de.png" alt="German" data-locale="de">
+              <img src="https://flagcdn.com/w40/us.png" alt="English" data-locale="en">
+              <img src="https://flagcdn.com/w40/es.png" alt="Spanish" data-locale="es">
+              <img src="https://flagcdn.com/w40/pt.png" alt="Portuguese" data-locale="pt">
+              <img src="https://flagcdn.com/w40/fr.png" alt="French" data-locale="fr">
+              <img src="https://flagcdn.com/w40/it.png" alt="Italian" data-locale="it">
+              <img src="https://flagcdn.com/w40/nl.png" alt="Dutch" data-locale="nl">
+              <img src="https://flagcdn.com/w40/pl.png" alt="Polish" data-locale="pl">
+              <img src="https://flagcdn.com/w40/jp.png" alt="Japanese" data-locale="ja">
+            </div>           -->
+            <div class="links">    
+              <a id="google-play-link" href="#"><img id="google-play-link-img" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>                
+              <a id="app-store-link" href="#" style="display: inline-block; overflow: hidden;"><img id="app-store-link-img" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1331251200?h=e787b40f0e3dbf9e419a649418a3e23a" alt="Download on the App Store"></a>                
+            </div>                     
           </div>
-          <div class="flags">
-            <img src="https://flagcdn.com/w40/de.png" alt="German" data-locale="de">
-            <img src="https://flagcdn.com/w40/us.png" alt="English" data-locale="en">
-            <img src="https://flagcdn.com/w40/es.png" alt="Spanish" data-locale="es">
-            <img src="https://flagcdn.com/w40/pt.png" alt="Portuguese" data-locale="pt">
-            <img src="https://flagcdn.com/w40/fr.png" alt="French" data-locale="fr">
-            <img src="https://flagcdn.com/w40/it.png" alt="Italian" data-locale="it">
-            <img src="https://flagcdn.com/w40/nl.png" alt="Dutch" data-locale="nl">
-            <img src="https://flagcdn.com/w40/pl.png" alt="Polish" data-locale="pl">
-            <img src="https://flagcdn.com/w40/jp.png" alt="Japanese" data-locale="ja">
-          </div>
-        </div> 
-      </div>            
-      <div class="title">        
-      </div>           
-    </div>        
-  </div>    
+          
+        </div>            
+                  
+      </div>        
+    </div>   
+  </div>   
   <footer>  	
     <div class="left"><a href="./terms_of_use.html">Terms Of Use</a></div>
     <div class="left"><a href="./data_privacy.html">Data Privacy</a></div>
@@ -72,7 +82,7 @@
       locale = "en"; // Default to 'en' if locale is not supported
     }
 
-    const images = document.querySelectorAll(".preview img");
+    const images = document.querySelectorAll(".preview .images img");
 
     // Update image paths based on locale
     function updateImages(newLocale) {
