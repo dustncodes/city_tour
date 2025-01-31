@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>  
+  <title>Bamberg Stadtführer – Selbstgeführte Tour zu den Top-Sehenswürdigkeiten</title>
+  <meta name="description" content="Entdecke Bamberg mit unserer App. Erfahre mehr über den Bamberger Dom, das Alte Rathaus und die Altstadt. Jetzt herunterladen!" />
+  <meta name="keywords" content="Bamberg city tour app, Bamberg Sehenswürdigkeiten App, self-guided tours Bamberg, Bamberg attractions, Bamberg tour guide, Bamberg walking tour app, Bamberg points of interest, Bamberg Cathedral app, Old Town Hall Bamberg app, Little Venice Bamberg app, self-guided city tour, travel app Bamberg, Bamberg travel guide, Bamberg tours in English, Bamberg tours in German, Bamberg Sehenswürdigkeiten, Stadtführer Bamberg, Bamberg city guide, UNESCO World Heritage Bamberg, travel to Bamberg, Bamberg Altstadt App, top attractions Bamberg, what to see in Bamberg, Bamberg Reiseführer App" />
+
+  <link rel="canonical" href="https://bamberg.city-tour.app/de" />
+  <link rel="alternate" hreflang="en" href="https://bamberg.city-tour.app/en" />
+  <link rel="alternate" hreflang="de" href="https://bamberg.city-tour.app/de" />    
+  <link rel="alternate" hreflang="x-default" href="https://bamberg.city-tour.app" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+
+  <link rel="stylesheet" href="../newstyles.css">        
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+</head>
+<body>
+<main>
+  <header>  	
+  </header>  
+  <div class="main">
+    <div class="center">
+      <div class="content">
+        <div class="preview">        
+          <div class="images">
+            <img src="../previews/de/0.png" alt="Image 1" class="active">
+            <img src="../previews/de/1.png" alt="Image 2">
+            <img src="../previews/de/2.png" alt="Image 3">
+            <img src="../previews/de/3.png" alt="Image 4">
+            <img src="../previews/de/4.png" alt="Image 5">
+            <div class="controls">
+              <button id="prev">&#9664;</button>
+              <button id="next">&#9654;</button>
+            </div>          
+          </div>          
+          <div class="app">
+            <div class="app-header">
+              <img class="logo" src="../logo.png" alt="Logo">
+              <div class="title">   
+                Bamberg City Tour     
+              </div> 
+            </div>   
+            <!-- <div class="flags">
+              <img src="https://flagcdn.com/w40/de.png" alt="German" data-locale="de">
+              <img src="https://flagcdn.com/w40/us.png" alt="English" data-locale="en">
+              <img src="https://flagcdn.com/w40/es.png" alt="Spanish" data-locale="es">
+              <img src="https://flagcdn.com/w40/pt.png" alt="Portuguese" data-locale="pt">
+              <img src="https://flagcdn.com/w40/fr.png" alt="French" data-locale="fr">
+              <img src="https://flagcdn.com/w40/it.png" alt="Italian" data-locale="it">
+              <img src="https://flagcdn.com/w40/nl.png" alt="Dutch" data-locale="nl">
+              <img src="https://flagcdn.com/w40/pl.png" alt="Polish" data-locale="pl">
+              <img src="https://flagcdn.com/w40/jp.png" alt="Japanese" data-locale="ja">
+            </div>           -->                                
+            <div class="more">
+              <button class="scroll-button" id="scrollButton">
+                <span class="material-icons">arrow_downward</span>
+              </button>
+            </div>
+          </div>          
+        </div>                              
+      </div>    
+      <div class="content">
+        <div id="information" class="information">
+          <div class="tabs">
+            <button class="tab-button active" onclick="showTab('description')">Beschreibung</button>
+            <button class="tab-button" onclick="showTab('pois')">Top-Sehenswürdigkeiten in Bamberg</button>
+          </div>
+          
+          <div id="description" class="tab-content active">                       
+            <h1>Entdecke Bamberg mit der besten selbstgeführten Stadtführer-App</h1>
+            <p>
+                Erlebe Bamberg als wärst du mit Einheimischen unterwegs! Egal, ob du wenig oder den ganzen Tag Zeit zum Erkunden hast – diese App ist dein persönlicher Stadtführer zu den wichtigsten Sehenswürdigkeiten der Stadt. 
+                Entwickelt von Einheimischen, zeigt dir die App die Top-Attraktionen und versteckten Juwelen von Bamberg. Perfekt für kurze Besuche oder ausgedehnte Stadttouren – die ideale Lösung, um Bamberg in deinem eigenen Tempo zu entdecken.
+            </p>
+          
+            <h2>Flexibel für jede Zeitplanung</h2>
+            <p>
+                Egal, wie viel Zeit du hast, diese App passt sich deinem Zeitplan an. Mit einem Wochenpass erhältst du Zugang zu einer wunderschön gestalteten Route, 
+                die an deine individuellen Bedürfnisse angepasst werden kann – von einem schnellen Überblick bis hin zu einer detaillierten Tour.
+            </p>
+          
+            <h2>Entdecke die schönste Route durch Bamberg</h2>
+            <p>
+                Folge einer sorgfältig ausgewählten Route auf den schönsten Wegen Bambergs, die dich zu den wichtigsten Sehenswürdigkeiten und Highlights Bambergs führt. 
+                Sobald du dich einem Wahrzeichen näherst, erhältst du eine Benachrichtigung mit den wesentlichen Informationen und spannenden Details. 
+                Kein lästiges Suchen mehr – folge einfach dem markierten Pfad und genieße eine stressfreie Reise durch die Geschichte, Kultur und Architektur von Bamberg.
+            </p>
+          
+            <h2>Hauptfunktionen der Bamberg City Tour</h2>
+            <ul>
+                <li>
+                    <strong>Kartenbasierte Navigation:</strong> Nutze die integrierte Karte, um der schönste Route durch Bamberg zu folgen. 
+                    Alle Sehenswürdigkeiten (POIs) sind klar markiert, damit du immer weißt, wohin du als Nächstes gehen musst.
+                </li>
+                <li>
+                    <strong>Dein digitaler Stadtführer:</strong> Erhalte wichtige Informationen zu jeder Attraktion – einschließlich Öffnungszeiten, Insider-Tipps und kurzen Zusammenfassungen. 
+                    So kannst du deine Zeit optimal nutzen.
+                </li>
+                <li>
+                    <strong>Aktuelle Benachrichtigungen:</strong> Bleibe auf dem Laufenden über vorübergehende Schließungen oder Wartungsarbeiten und passe deine Pläne flexibel an.
+                </li>
+            </ul>
+          
+            <h2>Warum Bamberg City Tour?</h2>
+            <p>
+                Diese App ist mehr als nur eine Karte – sie ist ein vollständiger, selbstgeführter Stadtführer. 
+                Entwickelt mit den Insiderinformationen von Einheimischen, vermittelt dir die App einen authentischen Einblick und führt dich stressfrei durch die Stadt.
+                Egal, ob du historische Sehenswürdigkeiten, kulturelle Highlights oder versteckte Wege erkunden möchtest – diese App stellt sicher, dass du nichts verpasst.
+            </p>
+          
+            <h2>Perfekt für Erstbesucher und erfahrene Interessierte </h2>
+            <p>
+                Erstbesucher finden alle wichtigen Sehenswürdigkeiten Bambergs, während Wiederkehrer neue, versteckte Schätze entdecken können. 
+                Mit regelmäßigen Updates bleibt diese App dein zuverlässiger Begleiter bei jedem Besuch.
+            </p>
+          
+            <h2>Starte dein Abenteuer in Bamberg noch heute!</h2>
+            <p>
+                Lade dir jetzt die Bamberg City Tour herunter und lasse diese App dein persönlicher Stadtführer zu den schönsten Routen, den wichtigsten Sehenswürdigkeiten 
+                und den versteckten Highlights der Stadt sein. Entdecke Bambergs einzigartige Mischung aus Geschichte, Kultur und Schönheit – alles in einer einzigen App!
+            </p>       
+            <div class="links">    
+              <a id="google-play-link" href="#"><img id="google-play-link-img" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>                
+              <a id="app-store-link" href="#" style="display: inline-block; overflow: hidden;"><img id="app-store-link-img" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1331251200?h=e787b40f0e3dbf9e419a649418a3e23a" alt="Download on the App Store"></a>                 
+            </div>     
+          </div>
+          <div id="pois" class="tab-content">
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Maximiliansplatz – Dein Startpunkt in Bamberg</h2>              
+              </div>
+              <div class="entry_text">
+                <p>
+                Willkommen am Maximiliansplatz, dem Herzen der historischen <strong>"Inselstadt"</strong> von Bamberg, umgeben von den malerischen Armen der Regnitz.
+                </p>
+                <p>
+                Wusstest Du, dass die Bamberger Altstadt ein <strong>UNESCO-Weltkulturerbe</strong> ist, mit 2.400 Fachwerkhäusern und einer jahrhundertealten Geschichte? Probiere lokale Spezialitäten wie das berühmte <strong>Bamberger Hörnla</strong> oder das rauchige <strong>Zwätschgabaamäs</strong>.
+                </p>
+                <p>
+                Am Maximiliansplatz solltest Du unbedingt den historischen <strong>Maximiliansbrunnen</strong> besuchen, der König Maximilian I. und anderen historischen Persönlichkeiten gewidmet ist.
+                </p>
+                <p>
+                Möchtest Du mehr Geheimnisse und Details über Bamberg erfahren? <strong>Entdecke den vollständigen Guide in unserer App!</strong>
+                </p>              
+              </div>                            
+            </div>     
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>St. Martin – Ein barockes Meisterwerk in Bamberg</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                Entdecke die <strong>Kirche St. Martin</strong>, auch als Jesuitenkirche bekannt, ein beeindruckendes Beispiel barocker Architektur im Herzen Bambergs.
+                </p>
+                <p>
+                Erbaut zwischen 1686 und 1693, besticht sie durch die prächtige Fassade von <strong>Leonhard Dientzenhofer</strong> und das atemberaubende Deckenfresko von <strong>Giovanni Francesco Marchini</strong>.
+                </p>
+                <p>
+                Erfahre mehr über ihre Rolle in der religiösen und kulturellen Geschichte Bambergs und entdecke weitere Details über dieses barocke Juwel in der <strong>Bamberg City Tour App</strong>.
+                </p>          
+              </div>                            
+            </div>     
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Grüner Markt – Bambergs historischer Marktplatz</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                Der <strong>Grüne Markt</strong>, eingebettet in die Bamberger Altstadt, ist seit dem Mittelalter ein Zentrum für Handel und gesellschaftliches Leben.
+                </p>
+                <p>
+                Umgeben von historischen Gebäuden und barocken Fassaden bietet dieser lebendige Platz frische Produkte, regionale Spezialitäten und eine Mischung aus Tradition und Moderne. Entdecke geschäftige Marktstände neben gemütlichen Cafés und Geschäften, die das Herz der Bamberger Kultur widerspiegeln.
+                </p>
+                <p>
+                Erlebe den einzigartigen Charme des Grünen Marktes und entdecke seine Geschichte in der <strong>Bamberg City Tour App</strong>.
+                </p>       
+              </div>                            
+            </div>  
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Der Gabelmann – Bambergs einzigartige Brunnenfigur</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                Die Geschichte des <strong>"Gabelmanns"</strong> (oder <em>Gabelmoo</em> im fränkischen Dialekt) ist ein faszinierender Teil der Bamberger Geschichte. Dieser ikonische Brunnen wurde von Ludwig Krug, einem Bamberger Stadtrat, gestiftet, dessen Vermächtnis in einem geschmuggelten Salzrad zurück nach Bamberg gelangte.
+                </p>
+                <p>
+                In Auftrag gegeben im Jahr 1566 und 1698 mit einer Neptun-Statue ergänzt, trägt der Brunnen seinen Spitznamen aufgrund des Dreizacks von Neptun, der an eine Gabel erinnert. Mit Quellwasser vom Stephansberg versorgt, ist er ein wahres Ingenieurskunstwerk.
+                </p>
+                <p>
+                Möchtest Du mehr über diesen skurrilen Brunnen und seine geheimnisvolle Geschichte erfahren? <strong>Entdecke die ganze Geschichte in der Bamberg City Tour App.</strong>
+                </p>  
+              </div>                            
+            </div>     
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Obere Brücke – Bambergs historische Verbindung</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Die <strong>Obere Brücke</strong>, erstmals 1157 erwähnt, war die älteste Verbindung zwischen der Bamberger Bergstadt und Inselstadt. Im 15. Jahrhundert wurde sie in Stein erneuert und 1976 zur Fußgängerzone erklärt.
+                  </p>
+                  <p>
+                  Besondere Highlights sind die <strong>Kreuzigungsgruppe</strong> von 1715, die Statue des <strong>Heiligen Johannes Nepomuk</strong> und ein atemberaubender Blick auf das Reverse Graffiti von Klaus Dauven auf der Unteren Brücke, das einen spannenden Kontrast zum barocken <strong>Alten Rathaus</strong> bildet.
+                  </p>
+                  <p>
+                  Entdecke die vollständige Geschichte und die Geheimnisse der Oberen Brücke in der <strong>Bamberg City Tour App</strong>.
+                  </p>
+              </div>                            
+            </div>  
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Altes Rathaus – Ein historisches Meisterwerk Bambergs</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Einer Legende nach bauten die Bürger:innen Bambergs das <strong>Alte Rathaus</strong> auf einer künstlichen Insel in der Regnitz, nachdem der Bischof ihnen kein Land dafür gewähren wollte.
+                  </p>
+                  <p>
+                  Bestaune die <strong>illusionistischen Fresken</strong>, die die Fassade dreidimensional erscheinen lassen, und achte auf das Bein eines Putto, das als kleine Skulptur aus dem Fresko herausragt. Im Inneren findest Du den prächtigen Rokokosaal und die Ludwigsammlung mit Porzellan.
+                  </p>
+                  <p>
+                  Ursprünglich 1387 erbaut und im 15. Jahrhundert im gotischen Stil umgestaltet, erlebte das Rathaus später barocke und Rokoko-Renovierungen. Die Sammlung zeigt farbenfrohes Meißener Porzellan und kunstvolle Straßburger Fayencen.
+                  </p>
+                  <p>
+                  Willst Du mehr über dieses beeindruckende Gebäude und seine Kunstwerke erfahren? <strong>Lade Dir die Bamberg City Tour App für das volle Erlebnis herunter.</strong>
+                  </p>
+              </div>                            
+            </div>  
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Diözesanmuseum – Bambergs Schätze der Vergangenheit</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Neben dem Bamberger Dom bewahrt das <strong>Diözesanmuseum</strong> eine beeindruckende Sammlung von Kunst und Geschichte, darunter die kaiserlichen Gewänder von <strong>Kaiser Heinrich II.</strong> und <strong>Kaiserin Kunigunde</strong>.
+                  </p>
+                  <p>
+                  Highlights sind der exquisite <strong>Sternenmantel</strong>, die goldbestickten Gewänder und einzigartige päpstliche Gewänder von Papst Clemens II. Besucher:innen können außerdem gotische Skulpturen, mittelalterliche Textilien und originale Figuren der Domportale im Kreuzgang bewundern.
+                  </p>
+                  <p>
+                  Entdecke Bambergs kulturelles Erbe und tauche ein in die Geschichte. Für weitere Details und Insider-Tipps schaue in die <strong>Bamberg City Tour App</strong>.
+                  </p>
+              </div>                            
+            </div> 
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Bamberger Dom – Ein Zeugnis von Geschichte und Kunst</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Der <strong>Bamberger Dom</strong>, in Auftrag gegeben von Kaiser Heinrich II. im Jahr 1002, ist eines der ikonischsten Wahrzeichen Bambergs. Mit seinen vier Türmen prägt er die Skyline der Stadt und verbindet spätromanische und frühgotische Stile.
+                  </p>
+                  <p>
+                  Im Inneren kannst Du den berühmten <strong>Bamberger Reiter</strong> bestaunen, das exquisite Grabmal von Kaiser Heinrich II. und Kaiserin Kunigunde von Tilman Riemenschneider sowie das einzige erhaltene Papstgrab nördlich der Alpen, das von Papst Clemens II.
+                  </p>
+                  <p>
+                  Entdecke dieses architektonische Meisterwerk und seine Schätze, vom Marienaltar von Veit Stoß bis hin zu den atemberaubenden romanischen Details. <strong>Erfahre mehr über die reiche Geschichte in der Bamberg City Tour App.</strong>
+                  </p>
+                  <p>
+                  Für zusätzliche Informationen besuche die <a href="https://de.wikipedia.org/wiki/Bamberger_Dom" target="_blank">Wikipedia-Seite zum Bamberger Dom</a>.
+                  </p>
+              </div>                            
+            </div> 
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Fürstenportal – Ein Meisterwerk des Bamberger Doms</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Das <strong>Fürstenportal</strong> ist eine beeindruckende Darstellung des Jüngsten Gerichts: Jesus als Weltenrichter, mit den Gläubigen auf seiner rechten Seite, die das Paradies erwarten, und den Verdammten auf der linken, die vom Teufel fortgeführt werden.
+                  </p>
+                  <p>
+                  Besondere Details umfassen die Apostel, die auf den Schultern von Propheten stehen, und zwei symbolische weibliche Figuren: <strong>Synagoga</strong> (Judentum) und <strong>Ecclesia</strong> (Christentum). Diese Figuren spiegeln historische theologische Perspektiven wider und stehen heute als Artefakte ihrer Zeit.
+                  </p>
+                  <p>
+                  Entdecke die vollständige Geschichte hinter diesem beeindruckenden Portal und seinen kunstvollen Schnitzereien in der <strong>Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div> 
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Alte Hofhaltung – Ein historisches Juwel Bambergs</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Die <strong>Alte Hofhaltung</strong>, einst Residenz der Bamberger Bischöfe, bildet ein beeindruckendes Ensemble zusammen mit dem Dom und der Neuen Residenz. Die Fachwerkbauten, die bis ins Jahr 1475 zurückreichen, und die Renaissance-Elemente wie das <strong>Schöne Tor</strong> zeigen Jahrhunderte an Geschichte und Architektur.
+                  </p>
+                  <p>
+                  Highlights sind das Relief am Schönen Tor, das die Jungfrau Maria, Heilige und die Flüsse Main und Regnitz darstellt. Heute beherbergt die Alte Hofhaltung das <strong>Historische Museum</strong> und die Katharinenkapelle, ein beliebter Ort für Hochzeiten. Im Sommer findet im Innenhof das Calderón-Festival statt.
+                  </p>
+                  <p>
+                  Tauche in die Geschichte ein und entdecke mehr über die Alte Hofhaltung in der <strong>Bamberg City Tour App</strong>.
+                  </p>
+              </div>                            
+            </div> 
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Historisches Museum – Bambergs kultureller Schatz</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Im Renaissance-Stil der <strong>Alten Hofhaltung</strong> beherbergt das <strong>Historische Museum</strong> eine beeindruckende Sammlung von Kunst und Artefakten, darunter Werke von <strong>Lucas Cranach</strong> und <strong>Pieter Brueghel dem Jüngeren</strong>.
+                  </p>
+                  <p>
+                  Erkunde Highlights wie fränkische Tafelmalereien, historische Zeitmesser und Ausstellungen über das jüdische Leben in Bamberg. Das Museum zeigt außerdem wechselnde Sonderausstellungen wie <strong>„Eine neue Ära beginnt“</strong>, die das Bürgertum Bambergs im 19. Jahrhundert beleuchtet.
+                  </p>
+                  <p>
+                  Erfahre mehr über Bambergs Kunst und Geschichte, indem Du das Historische Museum besuchst oder die <strong>Bamberg City Tour App</strong> nutzt.
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Neue Residenz – Pracht der Bamberger Fürstbischöfe</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Die <strong>Neue Residenz</strong>, ehemaliger Sitz der Bamberger Fürstbischöfe bis 1802, beeindruckt mit über 40 prunkvollen Räumen, verziert mit Stuckdecken, exquisiten Wandteppichen und barocken Möbeln.
+                  </p>
+                  <p>
+                  Highlights sind der prächtige <strong>Kaisersaal</strong> mit Fresken von Melchior Steidl, die <strong>Staatsgalerie</strong> mit Meisterwerken von Lucas Cranach und Pieter Brueghel dem Jüngeren sowie der idyllische <strong>Rosengarten</strong> mit 4.500 Rosen und einem atemberaubenden Blick auf Bamberg.
+                  </p>
+                  <p>
+                  Zwischen 1604 und 1703 erbaut, ist die Neue Residenz Teil des historischen Ensembles von Bamberg, zusammen mit dem Dom und der Alten Hofhaltung. <strong>Erfahre mehr über dieses bemerkenswerte Wahrzeichen in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Rosengarten – Eine blühende Oase in Bamberg</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Hinter der <strong>Neuen Residenz</strong> bietet der <strong>Rosengarten</strong> eine idyllische Ruheoase mit einem atemberaubenden Blick auf Bamberg und die Jurahügel.
+                  </p>
+                  <p>
+                  Ursprünglich ein Renaissancegarten, wurde er 1733 von Fürstbischof Friedrich Karl von Schönborn in ein barockes Meisterwerk umgewandelt und von <strong>Balthasar Neumann</strong> entworfen. Der Garten umfasst 4.500 Rosen, gesäumt von Lindenbäumen und geschmückt mit Skulpturen von <strong>Ferdinand Tietz</strong>.
+                  </p>
+                  <p>
+                  Entspanne Dich in dieser malerischen Umgebung oder genieße ein Café im Rokokopavillon. <strong>Erfahre mehr über diesen bezaubernden Garten in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Michaelsberg – Ein historisches Wahrzeichen Bambergs</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Das 1015 von Kaiser Heinrich II. gegründete <strong>Kloster Michaelsberg</strong> beeindruckt mit seiner barocken Architektur und bietet atemberaubende Ausblicke. Obwohl die Kirche derzeit wegen Renovierungsarbeiten geschlossen ist, bleibt das Kloster ein absolutes Muss.
+                  </p>
+                  <p>
+                  Wichtige Highlights sind das Grab des <strong>Heiligen Otto</strong>, das Deckengemälde „Himmlischer Garten“ mit 578 Blumen und Kräutern sowie der <strong>Michaelsberg-Garten</strong>, in dem wieder Bamberger Silvaner-Wein angebaut wird.
+                  </p>
+                  <p>
+                  Genieße den Panoramablick von der Terrasse oder erkunde die reiche Geschichte und den barocken Glanz des Klosters. <strong>Erfahre mehr in der Bamberg City Tour App</strong> oder besuche die <a href="https://de.wikipedia.org/wiki/Kloster_Michaelsberg_(Bamberg)" target="_blank">Wikipedia-Seite zum Kloster Michaelsberg</a>.
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Fränkisches Brauereimuseum – Bambergs Brautradition</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Das <strong>Fränkische Brauereimuseum</strong>, gelegen in den historischen Gewölben der ehemaligen Benediktinerkloster-Brauerei am Michelsberg, bietet einen einzigartigen Einblick in die Geschichte des Bierbrauens in Franken. Seit 1979 zeigt das Museum über 1.300 Exponate auf 1.000 Quadratmetern.
+                  </p>
+                  <p>
+                  Highlights umfassen das Sudhaus, die Mälzerei, Gär- und Lagerkeller sowie Werkzeuge, die von Brauer:innen und Mälzer:innen genutzt wurden. Besucher:innen können außerdem spezielle Ausstellungen genießen, wie künstlerisch gestaltete Bieretiketten von Christian Krank und eine monumentale Skulptur von Elias Frisch.
+                  </p>
+                  <p>
+                  Runde Deinen Besuch mit einer Führung, einer Verkostung fränkischer Biere und einem herrlichen Blick vom Michelsberg ab. <strong>Entdecke mehr über Bambergs Brautradition in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Klein-Venedig – Bambergs malerisches Fischerquartier</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Entlang der Regnitz gelegen, ist <strong>Klein-Venedig</strong> eine charmante Reihe von Fachwerkhäusern aus dem Mittelalter, die einst das Zuhause der Bamberger Fischer:innen waren. Diese dicht aneinander gereihten Häuser mit ihren hölzernen Balkonen und winzigen Gärten schaffen eine märchenhafte Kulisse.
+                  </p>
+                  <p>
+                  Erkunde dieses idyllische Viertel bei einer malerischen <strong>Bootsfahrt</strong> auf der Regnitz (März bis November) oder besuche das jährliche <strong>Sandkerwa-Fest</strong> im August, bei dem das traditionelle „Fischerstechen“ stattfindet – ein Wettkampf, bei dem sich Teilnehmer:innen mit Stangen von Booten ins Wasser stoßen.
+                  </p>
+                  <p>
+                  Entdecke mehr über diese malerische Nachbarschaft, ihre reiche Geschichte und einzigartige Traditionen in der <strong>Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Schlenkerla – Bambergs ikonisches Rauchbier</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  <strong>Schlenkerla</strong> ist die berühmteste Quelle für Bambergs einzigartiges <strong>Rauchbier</strong>. Nach traditionellen Methoden, die bis ins Mittelalter zurückreichen, wird das Malz über Buchenholzfeuern gedarrt, was dem Bier sein unverwechselbares rauchiges Aroma verleiht.
+                  </p>
+                  <p>
+                  Der Name "Schlenkerla" stammt von einem Brauer aus dem 19. Jahrhundert, der beim Gehen hinkte, was ihm diesen fränkischen Spitznamen einbrachte. Heute wird das Rauchbier in einem 600 Jahre alten Felsenkeller unterhalb des Stephansbergs gebraut.
+                  </p>
+                  <p>
+                  Genieße den reichhaltigen, vollmundigen Geschmack des Schlenkerla Rauchbiers, dessen rauchiges Aroma an Holz und Schwarzwälder Schinken erinnert. Neugierig auf die Geschichte des Bamberger Bieres? <strong>Entdecke mehr in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Heilige Kunigunde – Bambergs geliebte Kaiserin</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  <strong>Kaiserin Kunigunde</strong> bleibt eine zentrale Figur in der Geschichte Bambergs. Im Jahr 1200 heiliggesprochen, bilden sie und ihr Ehemann Kaiser Heinrich II. das einzige Kaiserpaar, das heiliggesprochen wurde. Besonders in Bamberg ist Kunigunde als Heilige noch beliebter als ihr Mann.
+                  </p>
+                  <p>
+                  Zu den Legenden um Kunigunde gehören die <strong>Pflugscharprüfung</strong>, bei der sie ihre Unschuld bewies, indem sie barfuß über glühende Pflugscharen ging, und das <strong>Pfennigwunder</strong>, das ihre Gerechtigkeit und Fürsorge während des Baus der Stephanskirche zeigt.
+                  </p>
+                  <p>
+                  Ihr Vermächtnis lebt weiter, mit jährlichen Feiern an ihrem Festtag und einem Rosenstrauß, der ihrer Statue an der Unteren Brücke überreicht wird. Entdecke mehr über ihr faszinierendes Leben und ihre Wunder in der <strong>Bamberg City Tour App</strong> oder auf ihrer <a href="https://de.wikipedia.org/wiki/Kunigunde_von_Luxemburg" target="_blank">Wikipedia-Seite</a>.
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>An den Kranen – Bambergs historischer Hafen</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  <strong>An den Kranen</strong> erinnern zwei historische eiserne Kräne an Bambergs einstigen Hafen, wo Schiffe ihre Waren be- und entluden. Im Jahr 1156 verlieh Kaiser Friedrich I. Barbarossa Bamberg das <strong>Stapelrecht</strong>, wodurch es zu einem wichtigen Handelszentrum wurde. Vorbeifahrende Schiffe mussten für drei Tage anhalten und ihre Waren in der Stadt anbieten.
+                  </p>
+                  <p>
+                  Neben der historischen Bedeutung bietet dieser Ort atemberaubende Ausblicke auf die <strong>Altstadt</strong>, die Domtürme und das Kloster St. Michael. In der Nähe befindet sich das ehemalige Schlachthaus, das heute zur Universitätsbibliothek Bamberg gehört.
+                  </p>
+                  <p>
+                  Heute ist der Bereich An den Kranen ein beliebter Ausgangspunkt für <strong>Rundfahrten auf der Regnitz</strong>. <strong>Erfahre mehr über seine reiche Geschichte in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Schloss Geyerswörth – Ein historisches Juwel</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  <strong>Schloss Geyerswörth</strong>, ursprünglich im Besitz der Familie Geyer, wurde im späten 16. Jahrhundert zur Residenz der Bamberger Fürstbischöfe umgebaut. Architekt Erasmus Braun schuf den fünfflügeligen Komplex, dessen Tor das Wappen des Fürstbischofs Ernst von Mengersdorf schmückt.
+                  </p>
+                  <p>
+                  Das Schloss hat auch eine dunkle Vergangenheit: In den 1620er-Jahren diente es als Sitz des berüchtigten Hexenjägers Fürstbischof Johann Georg I., der mindestens 600 Hinrichtungen zu verantworten hatte. Trotz Schäden während des Dreißigjährigen Krieges wurde das Schloss restauriert und wird heute für städtische Empfänge und das jährliche <strong>Fränkische Weinfest</strong> genutzt.
+                  </p>
+                  <p>
+                  Derzeit wegen Renovierungen geschlossen, wird der Schlossturm nach Abschluss der Arbeiten wieder zugänglich sein. <strong>Erfahre mehr über seine reiche Geschichte in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+            
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Villa Concordia – Bambergs Künstlerhaus</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Die <strong>Villa Concordia</strong>, 1997 gegründet, ist ein barockes Wasserschloss am Ufer der Regnitz. Sie dient als Residenz für bis zu zwölf Künstler:innen aus den Bereichen Bildende Kunst, Literatur und Musik, die jährlich Stipendien erhalten.
+                  </p>
+                  <p>
+                  Die Villa veranstaltet rund 80 <strong>Veranstaltungen</strong> pro Jahr, darunter Ausstellungen, Lesungen und Konzerte, von denen die meisten kostenlos sind. Stipendiat:innen profitieren auch von Kooperationen und Netzwerkmöglichkeiten mit anderen Kulturinstitutionen.
+                  </p>
+                  <p>
+                  Entdecke mehr über dieses einzigartige Zentrum für Kreativität und sein historisches Ambiente in der <strong>Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Don-Bosco-Fähre – Eine besondere Erfahrung</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  Die <strong>Don-Bosco-Fähre</strong> verbindet seit 2012 die Schleuse 100 und den Stephansberg. Betrieben von der <strong>Jugendhilfe Don Bosco</strong>, bietet die Fähre benachteiligten Jugendlichen neue Chancen und Unterstützung.
+                  </p>
+                  <p>
+                  Von April bis Oktober kannst Du täglich diese landschaftlich reizvolle Überfahrt genießen und gleichzeitig ein bedeutendes soziales Projekt unterstützen. <strong>Erfahre mehr über diese besondere Initiative in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div>
+
+            <div class="entry">
+              <div class="entry_title">
+                <h2>Schleuse 100 – Ein Ingenieurswunder</h2>
+              </div>
+              <div class="entry_text">
+                <p>
+                  <strong>Schleuse 100</strong> ist die letzte Schleuse des historischen Ludwig-Donau-Main-Kanals, der zwischen 1836 und 1845 unter König Ludwig I. erbaut wurde. Der Kanal verband den Main in Bamberg mit der Donau in Kelheim und überwand eine Höhendifferenz von 200 Metern mit 100 Schleusen.
+                  </p>
+                  <p>
+                  Obwohl der Kanal aufgrund der Konkurrenz durch die Eisenbahn nur von kurzer Bedeutung war, bleibt er ein beeindruckendes Zeugnis des Ingenieurswesens des 19. Jahrhunderts. <strong>Erfahre mehr über seine faszinierende Geschichte in der Bamberg City Tour App.</strong>
+                  </p>
+              </div>                            
+            </div> 
+
+          </div>
+        </div>        
+      </div>    
+    </div>   
+  </div>   
+  <footer>  	
+    <div class="left">
+      <div class="links">    
+        <a id="google-play-link" href="#"><img id="google-play-link-img" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>                
+        <a id="app-store-link" href="#" style="display: inline-block; overflow: hidden;"><img id="app-store-link-img" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1331251200?h=e787b40f0e3dbf9e419a649418a3e23a" alt="Download on the App Store"></a>                  
+      </div>  
+    </div>    
+    <div class="right"><a href="../imprint.html">Imprint</a></div>
+    <div class="right"><a href="mailto:bamberg@city-tour.app">Contact</a></div>
+    <br>    
+  </footer>
+</main>   
+
+<script>  
+  document.getElementById('scrollButton').addEventListener('click', function () {
+    document.getElementById('information').scrollIntoView({
+      behavior: 'smooth' // Enables smooth scrolling
+    });
+  });
+
+  const urlParams = new URLSearchParams(window.location.search);    
+  let campaign = urlParams.get("campaign") || "website-default";
+
+  function updateLinks(campaign) {
+    document.getElementById("google-play-link").href = `https://play.google.com/store/apps/details?id=app.citytour.bamberg&pcampaignid=${campaign}`;
+    document.getElementById("app-store-link").href = `https://apps.apple.com/de/app/wuzzle-word-lanes-word-jam/id1660307373?itsct=apps_box_badge&itscg=30200&campaign=${campaign}`;
+  }    
+
+  updateLinks(campaign);
+
+  const images = document.querySelectorAll(".preview .images img");  
+
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+  let currentIndex = 0;
+  const intervalTime = 3000; // Time in milliseconds to show each image
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.toggle("active", i === index);
+    });
+  }
+
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  function showPrevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  // Auto-rotate images
+  let interval = setInterval(showNextImage, intervalTime);
+
+  // Navigation button event listeners
+  nextButton.addEventListener("click", () => {
+    clearInterval(interval);
+    showNextImage();
+    interval = setInterval(showNextImage, intervalTime);
+  });
+
+  prevButton.addEventListener("click", () => {
+    clearInterval(interval);
+    showPrevImage();
+    interval = setInterval(showNextImage, intervalTime);
+  });
+
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach((content) => {content.classList.remove('active')});
+    document.querySelectorAll('.tab-button').forEach((button) => {button.classList.remove('active')});
+    document.getElementById(tabId).classList.add('active');    
+    document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');    
+  }
+  
+</script>
+</body>
+</html>
