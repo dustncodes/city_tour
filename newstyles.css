@@ -233,10 +233,12 @@ body {
 
 #google-play-link-img {
   height: 6.0vh;
+  max-height: 44px;
 }
 
 #app-store-link-img {
   height: 4.1vh;
+  max-height: 30px;
 }
 
 #description {
