@@ -10,7 +10,8 @@
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       const isAndroid = /android/i.test(userAgent);
-      const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+      const isIOS = /iPad|iPhone|iPod/.test(userAgent) ||
+              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
       if (isIOS) {
         window.location.href = "https://apps.apple.com/app/bamberg-city-tour/id6737908364?itsct=apps_box_badge&itscg=30200&campaign=website-default";
