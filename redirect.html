@@ -6,22 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecting...</title>
   <script>
-    (function() {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  (function () {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const isAndroid = /android/i.test(userAgent);
 
-      const isAndroid = /android/i.test(userAgent);
-      const isIOS = /iPad|iPhone|iPod/.test(userAgent) ||
-              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isIOS = (() => {
+      const platform = navigator.platform;
+      const maxTouch = navigator.maxTouchPoints || 0;
 
-      if (isIOS) {
-        window.location.href = "https://apps.apple.com/app/bamberg-city-tour/id6737908364?itsct=apps_box_badge&itscg=30200&campaign=website-default";
-      } else if (isAndroid) {
-        window.location.href = "https://play.google.com/store/apps/details?id=app.citytour.bamberg&pcampaignid=website-default";
-      } else {
-        window.location.href = "https://bamberg.city-tour.app";
-      }
+      // iPhone/iPod/iPad Classic
+      if (/iPad|iPhone|iPod/.test(userAgent)) return true;
+
+      // iPadOS 13+ in Desktop Mode (Safari fakes Mac)
+      if (platform === 'MacIntel' && maxTouch > 1) return true;
+
+      return false;
     })();
-  </script>
+
+    if (isIOS) {
+      window.location.href = "https://apps.apple.com/app/bamberg-city-tour/id6737908364?itsct=apps_box_badge&itscg=30200&campaign=website-default";
+    } else if (isAndroid) {
+      window.location.href = "https://play.google.com/store/apps/details?id=app.citytour.bamberg&pcampaignid=website-default";
+    } else {
+      window.location.href = "https://bamberg.city-tour.app";
+    }
+  })();
+</script>
+
 </head>
 <body>
   <noscript>
